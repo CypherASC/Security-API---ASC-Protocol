@@ -1,0 +1,34 @@
+MIT License
+
+AsyncCypher Security Protocol (ASC) — Projeto Demonstrativo
+Copyright (c) 2025
+
+Por meio deste instrumento, concede-se permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (“Software”), para utilizá-lo sem restrições, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software, bem como permitir que terceiros o façam, desde que observadas as seguintes condições:
+
+O aviso de copyright acima, bem como este instrumento de permissão, deverão ser incluídos em todas as cópias ou partes substanciais do Software.
+
+O Software é fornecido “no estado em que se encontra”, sem qualquer tipo de garantia, expressa ou implícita, incluindo, mas não se limitando, às garantias de comercialização, adequação a um propósito específico e ausência de infração.
+Em nenhuma circunstância os autores ou detentores dos direitos autorais serão responsáveis por qualquer reivindicação, dano ou outra responsabilidade, seja em ação contratual, civil ou de outra natureza, decorrente do Software, de seu uso ou de sua distribuição.
+
+Cláusulas adicionais (reforço e mitigação de brechas)
+
+Este Software é classificado como material demonstrativo e educacional. Ele não deve ser utilizado em ambientes de produção, críticos ou sensíveis, sem prévia auditoria completa de segurança realizada por profissionais qualificados.
+
+O Software não garante conformidade com normas, leis, regulamentos ou boas práticas específicas de segurança da informação, proteção de dados, governança ou privacidade (incluindo, mas não limitado à LGPD, GDPR, HIPAA, PCI-DSS ou equivalentes).
+
+Os autores não se responsabilizam por quaisquer consequências diretas ou indiretas decorrentes de:
+
+- uso indevido, inadequado ou não supervisionado do Software;
+
+- falhas de integração, configuração, atualização ou manutenção realizadas pelo usuário;
+
+- perdas de dados, incidentes de segurança, violações de confidencialidade ou danos financeiros.
+
+Qualquer modificação, adaptação ou redistribuição realizada por terceiros não implica endosso, validação ou responsabilidade dos autores originais.
+
+O usuário é o único responsável por avaliar a adequação, riscos e implicações técnicas e legais decorrentes do uso deste Software, ainda que parcial.
+
+Aviso Legal Final
+
+Este documento foi redigido de forma objetiva e formal, seguindo princípios de clareza textual derivados das normas da ABNT para documentação técnica.
+O uso deste Software implica a aceitação integral dos termos aqui estabelecidos.

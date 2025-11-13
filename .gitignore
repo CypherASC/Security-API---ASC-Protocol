@@ -1,0 +1,52 @@
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente (contém chaves sensíveis)
+.env
+.env.local
+.env.production
+.env.production.local
+
+# Dados e logs
+dados/
+logs/
+*.log
+
+# Chaves geradas (não versionar chaves reais)
+chaves/
+*.pem
+*.key
+
+# Build
+dist/
+build/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporários
+tmp/
+temp/
+
+# Coverage
+coverage/
+
+# Arquivos de teste
+test-results/
+
+# IMPORTANTE: .env contém chaves reais e não deve ser versionado
+# Apenas .env.exemplo é incluído no repositório

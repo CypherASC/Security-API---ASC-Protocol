@@ -1,0 +1,70 @@
+# Arquivos e diretórios a ignorar no Docker
+
+# Dependências
+node_modules/
+npm-debug.log*
+
+# Arquivos de build
+dist/
+
+# Variáveis de ambiente
+.env*
+!.env.exemplo
+
+# Logs
+logs/
+*.log
+
+# Banco de dados
+dados/
+*.db
+*.sqlite
+
+# Chaves e certificados
+chaves/
+*.pem
+*.key
+*.crt
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Cobertura de testes
+coverage/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile*
+.dockerignore
+
+# Documentação
+docs/
+README.md
+*.md
+
+# Testes
+testes/
+jest.config.js
+
+# Configurações de desenvolvimento
+.eslintrc.js
+.prettierrc
+Makefile
+
+# Temporários
+tmp/
+temp/
