@@ -1,56 +1,56 @@
-AsyncCypher Security Protocol (ASC)
-⚠️ DEMONSTRAÇÃO — NÃO USAR EM PRODUÇÃO ⚠️
+# AsyncCypher Security Protocol (ASC)
 
-Este projeto é APENAS para fins educacionais e demonstrativos.
-NÃO deve ser usado em ambiente de produção sem auditoria completa de segurança.
+⚠️ **DEMONSTRAÇÃO — NÃO UTILIZAR EM PRODUÇÃO** ⚠️
 
-Por que não usar em produção
+> Este projeto destina-se **exclusivamente** a fins educacionais e demonstrativos.
+> **Não utilize em ambientes de produção** sem auditoria de segurança profissional e medidas adicionais.
 
-Armazenamento de segredos em variáveis de ambiente locais
+---
 
-Ausência de HSM (Hardware Security Module)
+## Avisos Importantes
 
-Falta de auditoria de segurança profissional
+### Por que NÃO usar em produção?
 
-Implementação simplificada para demonstração
+- Segredos armazenados em variáveis de ambiente locais
+- Ausência de HSM (Hardware Security Module) e KMS
+- Falta de auditoria de segurança profissional
+- Implementação simplificada e adaptada para demonstração
+- Inexistência de monitoramento e alertas avançados
+- Configurações e recomendações não otimizadas para produção
 
-Ausência de monitoramento avançado de segurança
+---
 
-Configurações não otimizadas para produção
+## Sobre o Projeto
 
-Sobre o Projeto
+O **AsyncCypher Security Protocol (ASC)** é uma API demonstrativa, desenvolvida com Node.js, TypeScript e Express, implementando práticas modernas de criptografia e segurança.
 
-O AsyncCypher Security Protocol (ASC) é uma API demonstrativa que implementa práticas modernas de segurança e criptografia usando Node.js + TypeScript + Express.
+### Funcionalidades Demonstradas
 
-O projeto demonstra implementações seguras de:
+- Autenticação JWT com refresh tokens e rotação segura
+- Criptografia simétrica (AES-256-GCM) e assimétrica (RSA-4096)
+- Hash de senhas seguro (Argon2id)
+- Controle de acesso baseado em roles (usuário/admin)
+- Validação robusta de entradas (Joi)
+- Proteção contra ataques de força bruta (Rate limiting)
+- Configuração de CORS e headers de segurança (Helmet)
+- Logs e monitoramento de eventos de segurança
 
-Autenticação JWT com refresh tokens
+---
 
-Criptografia simétrica (AES-256-GCM) e assimétrica (RSA-4096)
+## Stack Tecnológica
 
-Hash de senhas com Argon2id
+- **Node.js** + **TypeScript** + **Express**  
+  - Ecossistema maduro de bibliotecas de segurança
+  - Performance otimizada para APIs
+  - Tipagem estática para maior segurança em tempo de desenvolvimento
+  - Facilidade de implementação de middlewares e integrações
+  - Comunidade ativa e ampla documentação
 
-Sistema de roles e controle de acesso
+---
 
-Validação rigorosa de entrada
+## Estrutura do Projeto
 
-Rate limiting e proteções contra ataques
-
-Stack Tecnológica
-
-Node.js + TypeScript + Express foi escolhido por:
-
-Ecossistema maduro de bibliotecas de segurança
-
-Performance excelente para APIs
-
-Tipagem estática com TypeScript
-
-Facilidade de implementação de middlewares de segurança
-
-Ampla documentação e comunidade ativa
-
-Estrutura do Projeto
+```
 src/
 ├── controladores/    # Controllers da API
 ├── servicos/         # Lógica de negócio
@@ -58,177 +58,184 @@ src/
 ├── modelos/          # Modelos de dados
 ├── rotas/            # Definição das rotas
 └── utilitarios/      # Funções utilitárias
-testes/               # Testes unitários e de integração
-config/               # Configurações
-scripts/              # Scripts de inicialização
+testes/               # Testes unitários e integração
+config/               # Arquivos de configuração
+scripts/              # Scripts auxiliares
 docs/                 # Documentação adicional
+```
 
-Instalação e Execução
-Pré-requisitos
+---
 
-Node.js 18+
+## Instalação e Execução
 
-npm ou yarn
+> **Pré-requisitos:**  
+> - Node.js 18+
+> - npm ou yarn
 
-Instalação
+### 1. Instale as dependências
+
+```sh
 npm install
+# ou
+yarn install
+```
 
-Configuração
+### 2. Configuração rápida (DEMONSTRAÇÃO)
 
-⚠️ IMPORTANTE: Este projeto inclui chaves de demonstração pré-configuradas.
+> O projeto inclui chaves de demonstração pré-configuradas. Não utilize em ambientes reais!
 
-Para teste rápido:
-
+```sh
 npm run dev
+```
 
+### 3. Gerar suas próprias chaves (RECOMENDADO)
 
-Para gerar suas próprias chaves (recomendado):
-
+```sh
 cp .env.exemplo .env
 npm run gerar-chaves
 npm run dev
+```
 
+---
 
-Chaves incluídas (DEMONSTRAÇÃO):
+## Comandos Disponíveis
 
-JWT ECDSA P-256
+| Comando                | Descrição                                 |
+|------------------------|-------------------------------------------|
+| `npm run dev`          | Desenvolvimento com hot reload            |
+| `npm run build`        | Build para produção                       |
+| `npm run start`        | Execução no ambiente de produção          |
+| `npm run test`         | Execução de testes                        |
+| `npm run lint`         | Análise estática de código                |
+| `npm run gerar-chaves` | Geração de chaves de demonstração         |
 
-AES-256
+---
 
-RSA-4096
-⚠️ Nunca use essas chaves em produção!
+## Documentação da API
 
-Comandos Disponíveis
-npm run dev          # Desenvolvimento com hot reload
-npm run build        # Build para produção
-npm run start        # Execução em produção
-npm run test         # Executar testes
-npm run lint         # Verificar código
-npm run gerar-chaves # Gerar chaves de demonstração
+Após iniciar o servidor local:
 
-Documentação da API
+- **Swagger UI:** [http://localhost:3000/docs](http://localhost:3000/docs)
+- **Redoc:** [http://localhost:3000/redoc](http://localhost:3000/redoc)
 
-Após iniciar o servidor:
+### Exemplo: Tela da documentação Swagger
 
-Swagger UI: http://localhost:3000/docs
+![Exemplo Swagger UI](./docs/example-swagger.png)
+<!-- Imagem referência: 1 -->
 
-Redoc: http://localhost:3000/redoc
+---
 
-Exemplos de Uso
-1. Registro de Usuário
+## Exemplos de Uso
+
+### 1. Registro de Usuário
+
+```sh
 curl -X POST http://localhost:3000/auth/registrar \
   -H "Content-Type: application/json" \
   -d '{"email":"usuario@exemplo.com","senha":"MinhaSenh@123","nome":"Usuário Teste"}'
+```
 
-2. Login
+### 2. Login
+
+```sh
 curl -X POST http://localhost:3000/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"usuario@exemplo.com","senha":"MinhaSenh@123"}'
+```
 
-3. Acessar Rota Protegida
+### 3. Acessar Rota Protegida
+
+```sh
 curl -X GET http://localhost:3000/perfil \
   -H "Authorization: Bearer SEU_ACCESS_TOKEN"
+```
 
-4. Criptografar Dados
+### 4. Criptografar Dados
+
+```sh
 curl -X POST http://localhost:3000/criptografia/criptografar \
   -H "Authorization: Bearer SEU_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"dados":"Dados sensíveis para criptografar"}'
+```
 
-🔐 Gerenciamento de Chaves
+---
 
-Nenhuma chave real é incluída no repositório.
+## Gerenciamento de Chaves 🔐
 
-.env deve permanecer fora do controle de versão (.gitignore).
+- **Nenhuma chave real** é versionada neste repositório.
+- O arquivo `.env` deve ser **mantido fora** do controle de versão (`.gitignore`).
+- Utilize apenas o `.env.exemplo` como referência.
+- Para gerar suas próprias chaves:
 
-Apenas .env.exemplo é versionado para referência.
-
-Passos para gerar chaves seguras:
-
+```sh
 cp .env.exemplo .env
 npm run gerar-chaves
+```
 
+### Recomendações para Gestão de Segredos
 
-Boas práticas para produção:
+- [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/)
+- [HashiCorp Vault](https://www.vaultproject.io/)
+- Azure Key Vault
+- Google Secret Manager
+- Hardware Security Modules (HSM)
 
-AWS Secrets Manager
+---
 
-HashiCorp Vault
+## Medidas de Segurança Implementadas
 
-Azure Key Vault
+✅ **Implementado**
 
-Google Secret Manager
+- Hash de senhas (Argon2id)
+- JWT assinado com ECDSA P-256
+- Refresh tokens com rotação e blacklist
+- Criptografia AES-256-GCM e RSA-4096
+- Validação de entrada (Joi)
+- Rate limiting e proteção brute force
+- CORS configurável
+- Helmet: headers de segurança
+- Logs de eventos de segurança
+- Sistema de roles (usuário/admin)
 
-Hardware Security Modules (HSM)
+❌ **A IMPLEMENTAR PARA PRODUÇÃO**
 
-Medidas de Segurança Implementadas
-✅ Implementado
+- Gestão de chaves com HSM/KMS
+- Auditoria de segurança profissional
+- Monitoramento avançado (SIEM)
+- Backup seguro e rotativo de chaves
+- Análise contínua de vulnerabilidades
+- Testes de penetração periódicos
+- Compliance regulatório
+- Plano de disaster recovery
+- Autenticação multi-fator (MFA)
 
-Hash de senhas com Argon2id
+---
 
-JWT com assinatura ECDSA P-256
+## Recomendações para Produção
 
-Refresh tokens com rotação e blacklist
+- **Gerenciamento de Segredos:** AWS Secrets Manager, HashiCorp Vault, Azure Key Vault, Google Secret Manager
+- **Monitoramento e Logs:** AWS CloudTrail, Splunk, ELK Stack, Datadog Security
+- **Banco de Dados:** PostgreSQL com criptografia em repouso, backup seguro, conexões SSL/TLS
 
-Criptografia AES-256-GCM e RSA-4096
+---
 
-Validação de entrada (Joi)
+## Avisos Legais & Éticos
 
-Rate limiting e proteção contra brute force
+- O código é fornecido **"no estado em que se encontra"**, sem garantias de qualquer tipo.
+- Utilize **apenas** para aprendizado e demonstração.
+- Não utilize em ambientes de produção sem auditorias e adequações profissionais.
+- Sempre realize testes em ambientes isolados.
+- Não utilize para atividades ilícitas; siga as leis de privacidade e proteção de dados aplicáveis.
 
-CORS configurável
+---
 
-Cabeçalhos de segurança (Helmet)
+## Licença
 
-Logs de segurança
+MIT License — consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-Sistema de roles (usuário/admin)
+---
 
-❌ Faltante para Produção
+## Contribuição
 
-HSM ou Key Management Service
-
-Auditoria de segurança profissional
-
-Monitoramento avançado (SIEM)
-
-Backup seguro e rotativo de chaves
-
-Análise de vulnerabilidades contínua
-
-Testes de penetração
-
-Compliance regulatório
-
-Disaster recovery
-
-Multi-factor authentication
-
-Recomendações para Produção
-
-Gerenciamento de Segredos: AWS Secrets Manager, HashiCorp Vault, Azure Key Vault, Google Secret Manager
-Monitoramento: AWS CloudTrail, Splunk, ELK Stack, Datadog Security
-Banco de Dados: PostgreSQL com criptografia em descanso, backup criptografado, conexões SSL/TLS
-
-Avisos Legais e Éticos
-
-Código fornecido "como está" sem garantias
-
-Use apenas para aprendizado e demonstração
-
-Realize auditoria completa antes de qualquer uso real
-
-Teste sempre em ambiente isolado
-
-Não use para atividades maliciosas
-
-Respeite leis de privacidade e proteção de dados
-
-Licença
-
-MIT License — consulte o arquivo LICENSE
- para detalhes.
-
-Contribuição
-
-Projeto demonstrativo. Contribuições são bem-vindas apenas para fins educacionais.
+O projeto é demonstrativo. Contribuições são bem-vindas para fins educacionais.
